@@ -8,6 +8,10 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
+  geocoding: ^2.1.1
+  geolocator: ^10.1.0
+  http: ^1.1.0
+  #http: ^1.1.1
   # path: ^1.8.0
 
 dev_dependencies:
