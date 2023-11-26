@@ -24,7 +24,7 @@ class WeatherService {
     var json = jsonDecode(response.body);
 
     // Cria o objeto WeatherModel
-    WeatherModel weather = new WeatherModel.fromJson(json);
+    WeatherModel weather = WeatherModel.fromJson(json);
 
     // Retorna o objeto WeatherModel
     return weather;
