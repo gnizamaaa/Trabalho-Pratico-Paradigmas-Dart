@@ -10,4 +10,8 @@ class WeatherModel {
     temp = json['main']['temp'];
     mainCondition = json['weather'][0]['main'];
   }
+
+  String toString() {
+    return 'Cidade: $city, Temperatura: $temp, Condição: $mainCondition';
+  }
 }

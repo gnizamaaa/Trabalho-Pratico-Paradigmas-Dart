@@ -2,10 +2,8 @@ import 'dart:html';
 
 class GetCityUser {
   String city = '';
+  InputElement input = document.querySelector('#my-input') as InputElement;
   GetCityUser() {
-    // Carrega o campo de texto
-    InputElement input = document.querySelector('#my-input') as InputElement;
-
     // Carrega o output
     OutputElement output =
         document.querySelector('#my-output') as OutputElement;
@@ -19,5 +17,9 @@ class GetCityUser {
       output.text = text;
       city = text!;
     });
+  }
+
+  void addChangeListener(Function(Event) listener) {
+    input.onChange.listen(listener);
   }
 }
