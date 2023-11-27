@@ -1,15 +1,14 @@
 class WeatherModel {
-  String city = '';
   double temp = 0;
   double feelsLike = 0;
   double tempMin = 0;
   double tempMax = 0;
   String mainCondition = '';
 
-  WeatherModel(this.city, this.temp, this.mainCondition);
+  WeatherModel(this.temp, this.mainCondition);
 
   WeatherModel.fromJson(Map<String, dynamic> json) {
-    city = json['name'];
+    //city = json['name'];
     temp = json['main']['temp'];
     mainCondition = json['weather'][0]['main'];
     feelsLike = json['main']['feels_like'];
@@ -19,6 +18,6 @@ class WeatherModel {
 
   @override
   String toString() {
-    return 'Cidade: $city, Temperatura: $temp, Condição: $mainCondition, Sensação Térmica: $feelsLike, Temperatura Mínima: $tempMin, Temperatura Máxima: $tempMax';
+    return 'Temperatura: $temp, Condição: $mainCondition, Sensação Térmica: $feelsLike, Temperatura Mínima: $tempMin, Temperatura Máxima: $tempMax';
   }
 }

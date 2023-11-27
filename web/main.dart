@@ -7,10 +7,23 @@ void main() {
   GetCityUser teste = GetCityUser();
 
   WeatherService weatherService = WeatherService();
-  OutputElement output = document.querySelector('#my-pred') as OutputElement;
+  OutputElement present =
+      document.querySelector('#my-present') as OutputElement;
 
   teste.addChangeListener((event) async {
     WeatherModel weather = await weatherService.getWeather(teste.city);
-    output.text = weather.toString();
+    present.text = '$weather\n ';
+  });
+
+  String textaoTempos = '';
+  OutputElement future = document.querySelector('#my-pred') as OutputElement;
+  teste.addChangeListener((event) async {
+    List<WeatherModel> weather =
+        await weatherService.getFutureWeather(teste.city);
+
+    for (var element in weather) {
+      textaoTempos += '$element \n';
+    }
+    future.text = textaoTempos;
   });
 }
