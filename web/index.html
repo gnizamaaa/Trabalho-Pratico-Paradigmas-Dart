@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
-  <title>quickstart</title>
+  <title>Previsão do Tempo</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="main.dart.js"></script>
+
 </head>
 
 <body>
   <header>
-    <h2>Insira aqui a cidade que deseja obter o clima</h2>
+    <h1>Previsão do Tempo</h1>
+    <p>Insira aqui a cidade que deseja obter o clima:</p>
+    <input type="text" id="my-input" placeholder="Digite o nome da cidade">
   </header>
-  <input type="text" id="my-input" />
-  <header>
-    <h2>Clima da cidade: <output id="my-output"></output> </h2>
-  </header>
-  <p>Clima atual da cidade</p>
-  <output id="my-present"></output>
-  <p>Previsão de clima:</p>
-  <output id="my-pred"></output>
+
+  <section class="current-weather">
+    <h2>Clima atual da cidade de:</h2>
+    <output id="my-output"></output>
+
+    <output id="my-present"></output>
+    <img id="my-present-img" src="" alt="">
+  </section>
+
+  <section class="forecast">
+    <h2>Previsão do Tempo</h2>
+    <output id="my-pred-day1"></output>
+    <img id="my-pred-day1-img" src="" alt="">
+    <output id="my-pred-day2"></output>
+    <img id="my-pred-day2-img" src="" alt="">
+    <output id="my-pred-day3"></output>
+    <img id="my-pred-day3-img" src="" alt="">
+  </section>
+
 </body>
 
 </html>

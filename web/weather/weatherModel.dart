@@ -4,6 +4,7 @@ class WeatherModel {
   double tempMin = 0;
   double tempMax = 0;
   String mainCondition = '';
+  String icon = '';
 
   WeatherModel(this.temp, this.mainCondition);
 
@@ -14,6 +15,7 @@ class WeatherModel {
     feelsLike = json['main']['feels_like'];
     tempMin = json['main']['temp_min'];
     tempMax = json['main']['temp_max'];
+    icon = json['weather'][0]['icon'];
   }
 
   @override
